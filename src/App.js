@@ -7,8 +7,8 @@ import Class from './Components/Class & Function/Class'
 import LifeCycleMethods from './Components/Lifecylce all/LifeCycle';
 import Parent from './Components/Parent to Child Props/Parent';
 import LazyComponent from './Components/LazyCompo/LazyComponent';
-import StateExample from './Stateful & Stateless/Stateful';
-import Stateless from './Stateful & Stateless/Stateless';
+import StateExample from './Components/Stateful & Stateless/Stateful';
+import Stateless from './Components/Stateful & Stateless/Stateless';
 // import Example from './Components/All Hooks/UseCleanUp';
 import FetchAPICall from './Components/Axios & Fetch/FetchAPICall';
 import AxiosCall from './Components/Axios & Fetch/AxiosCall';
@@ -23,9 +23,20 @@ import StateUpLifting from './Components/State Up Lifting/StateUpLifting';
 import Compo1 from './Components/ContextAPI/Compo1';
 import ClickCounter from './Components/High Order Compo/ClickCounter';
 import HoverCounter from './Components/High Order Compo/HoverCounter';
+import CheckUser from './Components/Conditional Rendering/CheckUser';
+import Ternary from './Components/Conditional Rendering/Ternary';
+import DemoUseEffect from './Components/CleanUp Implement/CleanUp';
+import ControlledComp from './Components/Contrl&UncntlForm/Controlled';
+import UncontrolledComp from './Components/Contrl&UncntlForm/UnControlled';
 
 
-function App() {
+const App = () => {
+  // const getData = (data) => {
+  //   console.log("This is data from parent Component", data);
+  // }
+  // const name2="Tarun";
+
+
   return (
     <div className="App">
 
@@ -64,25 +75,25 @@ function App() {
 
       {/* <ComponentA /> */}
 
-      {/* <StateUpLifting /> */}
+      {/* <StateUpLifting getName={getData}/> */}
 
       {/* <Compo1 /> */}
 
       {/* <ClickCounter /> */}
       {/* <HoverCounter /> */}
 
-      
+      {/* <CheckUser /> */}
+      {/* <Ternary /> */}
 
+      {/* <DemoUseEffect /> */}
 
-
-
-
-
-
-
+      {/* <ControlledComp /> */}
+      {/* <UncontrolledComp /> */}
 
       
+
       
+
 
 
 
@@ -92,3 +103,4 @@ function App() {
 }
 
 export default App;
+

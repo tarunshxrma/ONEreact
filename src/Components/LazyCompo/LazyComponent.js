@@ -1,32 +1,25 @@
+import React, {useEffect,useState} from 'react'
 import axios from 'axios'
-import React, {useEffect, useState} from 'react'
 
- const LazyComponent = () => {
-    const [Data,setData]=useState()
+const LazyComponent = () => {
+    const [Data, setData] = useState('');
     useEffect(()=>{
-        axios.get('https://jsonplaceholder.typicode.com/comments')
-        .then((response)=>{
-            setData(response.data)
-        })
+        axios.get('https://jsonplaceholder.typicode.com/photos').then((res)=>{setData(res.data)
+    console.log(res.data)})
+    .catch((err)=>console.log(err));
     },[])
     return (
         <div>
-            <table border='1px'>
-                <tbody>
-                    {data && data.map((info,ind)=>{
-                        return(
-                            <tr key={ind}>
-                                <td>{info.name}</td>
-                                <td>{info.email}</td>
-                                <td>{info.body}</td>
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
+            {
+                Data && Data.map((item)=>{
+                    return(
+                        <div>
+                            <img src={item.thumbnailUrl} alt='image' height='50px' width='50px' />
+                            </div>
+                    )
+                })
+            }
         </div>
     )
-                }
-
-                export default LazyComponent;
-        
+}
+export default LazyComponent

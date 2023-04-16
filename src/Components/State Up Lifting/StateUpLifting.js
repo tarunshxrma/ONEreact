@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 
-function StateUpLifting(props) {
+const StateUpLifting = (props) => {
     const [name, setName] = useState("")
     const HandleSubmit = (e) => {
         e.preventDefault();
         console.log(props);
-        // console.log(props);
-        props.getData(name);
+        props.getName(name);
     }
     return (
         <div>StateUpLifting
